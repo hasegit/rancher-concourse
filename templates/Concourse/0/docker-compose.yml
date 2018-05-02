@@ -21,7 +21,7 @@ services:
     command: >
       sh -c "
         apk add --no-cache openssh &&
-        mkdir -p /tmp/keys/web /tmp/key/worker &&
+        mkdir -p /tmp/keys/web /tmp/keys/worker &&
         yes | ssh-keygen -t rsa -f /tmp/keys/web/tsa_host_key -N '' &&
         yes | ssh-keygen -t rsa -f /tmp/keys/web/session_signing_key -N '' &&
         yes | ssh-keygen -t rsa -f /tmp/keys/worker/worker_key -N '' &&
